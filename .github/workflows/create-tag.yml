@@ -24,3 +24,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.WORKFLOWS_PAT }} # if you don't want to set write permissions use a PAT token
         WITH_V: true
         DEFAULT_BUMP: patch
+        INITIAL_VERSION: 1.22.1
