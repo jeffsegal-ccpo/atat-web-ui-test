@@ -69,11 +69,6 @@ jobs:
           SNOWPASS: ""
       - name: Test the project
         run: npm run test
-      - name: Trigger SonarCloud
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       - name: Preserve build artifact
         uses: actions/upload-artifact@v3
         with:
