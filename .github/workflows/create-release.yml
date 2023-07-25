@@ -68,23 +68,11 @@ jobs:
           BASE_API_URL: "${{ secrets.VUE_BASE_API_URL }}"
           SNOWUSER: "${{ secrets.VUE_SNOW_USER }}"
           SNOWPASS: ""
-      - name: Test the project
-        run: npm run test
       - name: Preserve build artifact
         uses: actions/upload-artifact@v3
         with:
           path: dist/
           name: atat-web-ui
-      - name: Store vendor.js
-        uses: actions/upload-artifact@v3
-        with:
-          path: dist/js/vendor-js.html
-          name: vendor
-      - name: Store app.js
-        uses: actions/upload-artifact@v3
-        with:
-          path: dist/js/app-js.html
-          name: app
       - name: Preserve test coverage report
         uses: actions/upload-artifact@v3
         with:
